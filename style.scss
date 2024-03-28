@@ -29,3 +29,19 @@
 body {
     font-family: "Roboto", sans-serif;
 }
+
+:root {
+    --text-primary: #000;
+    --text-secondary: #52bedc;
+    --bg-body: #fff;
+    --white-text: #fff;
+    --bg-item: #000;
+    --yellow: #F8F200;
+    --blue-text: #52bedc;
+
+    //endpoints
+
+    --mobile: 320px;
+    --tablet: 1024px;
+    --desctop: 1920px;
+}
