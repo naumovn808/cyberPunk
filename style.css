@@ -1,0 +1,11 @@
+.link {
+  width: 100%;
+}
+.link__icon {
+  margin: 20px;
+}
+@media (max-width: 100px) {
+  .link {
+    margin: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
