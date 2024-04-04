@@ -32,7 +32,7 @@ body {
 
 :root {
     --text-primary: #000;
-    --text-secondary: #52bedc;
+    --text-secondary: #777;
     --bg-body: #fff;
     --white-text: #fff;
     --bg-item: #000;
@@ -67,6 +67,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 120px;
 
     @media (min-width: 500px) {
         background-image: url(./images/header-tablet.jpg);
@@ -183,5 +184,42 @@ body {
             font-size: 24px;
             width: 290px;
         }
+    }
+}
+
+.info {
+    margin-bottom: 120px;
+
+    &__title {
+        font-weight: 400;
+        font-size: 30px;
+        color: var(--text-primary);
+        font-family: "Archangelsk";
+        margin-bottom: 25px;
+    }
+
+    &__desc {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 200%;
+        color: var(--text-secondary);
+        margin-bottom: 120px;
+    }
+}
+
+.text-blue {
+    font-weight: 700;
+    color: var(--blue-text);
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    & img {
+        object-fit: cover;
+        width: 100%;
     }
 }
