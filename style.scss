@@ -48,9 +48,15 @@ body {
 
 .container {
     min-width: var(--mobile);
-    // width: 100%;
+    width: 90%;
     margin: 0 auto;
     padding: 0 12px;
+
+    @media (min-width: 1020px) {
+        padding: 0 100px;
+        width: 60%;
+        max-width: 1920px;
+    }
 }
 
 .header {
@@ -61,9 +67,19 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (min-width: 500px) {
+        background-image: url(./images/header-tablet.jpg);
+    }
+
+    @media (min-width: 780px) {
+        background-image: url(./images/header-desctop.jpg);
+        min-height: 1000px;
+    }
 }
 
 .nav {
+    padding-top: 20px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -71,17 +87,58 @@ body {
     gap: 10px;
     align-items: center;
 
+    @media (min-width: 780px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     &__links {
         display: flex;
         justify-content: space-between;
         // min-width: 300px;
         width: 100%;
         align-items: center;
+
+        @media (min-width: 500px) {
+            width: 65%;
+        }
+
+        @media (min-width: 780px) {
+            max-width: 379px;
+        }
+
+    }
+
+    &__icon {
+        width: 25px;
+        height: 25px;
+
+        @media (min-width:500px) {
+            width: 30px;
+            height: 30px;
+        }
+
+        @media (min-width: var(--tablet)) {
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    &__logo {
+        width: 200px;
+        height: 50px;
+
+        @media (min-width: 780px) {
+            width: 300px;
+            height: 75px;
+        }
     }
 }
 
 .square {
-    min-width: 320px; 
+    width: 320px;
+    height: 207px;
+    height: auto;
     background-color: var(--yellow);
     padding: 30px 0;
     display: flex;
@@ -90,6 +147,16 @@ body {
     gap: 25px;
     margin-bottom: -50px;
     clip-path: polygon(15% 1%, 100% 0, 100% 85%, 88% 100%, 0% 100%, 0% 15%);
+    margin-left: auto;
+
+    @media (min-width:780px) {
+        max-width: 624px;
+        height: auto;
+        padding: 70px;
+        width: 100%;
+        margin-right: 36px;
+        margin-bottom: 0;
+    }
 
     &__title {
         font-family: "Archangelsk";
@@ -97,6 +164,11 @@ body {
         font-size: 30px;
         text-align: center;
         color: var(--text-primary);
+
+        @media (min-width: 780px) {
+            font-size: 62px;
+            text-align: left;
+        }
     }
 
     &__btn {
@@ -106,5 +178,10 @@ body {
         font-weight: 700;
         font-size: 20px;
         line-height: 200%;
+
+        @media (min-width: 780px) {
+            font-size: 24px;
+            width: 290px;
+        }
     }
 }

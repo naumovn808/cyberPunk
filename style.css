@@ -42,8 +42,16 @@ body {
 
 .container {
   min-width: var(--mobile);
+  width: 90%;
   margin: 0 auto;
   padding: 0 12px;
+}
+@media (min-width: 1020px) {
+  .container {
+    padding: 0 100px;
+    width: 60%;
+    max-width: 1920px;
+  }
 }
 
 .header {
@@ -55,8 +63,20 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+@media (min-width: 500px) {
+  .header {
+    background-image: url(./images/header-tablet.jpg);
+  }
+}
+@media (min-width: 780px) {
+  .header {
+    background-image: url(./images/header-desctop.jpg);
+    min-height: 1000px;
+  }
+}
 
 .nav {
+  padding-top: 20px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -64,15 +84,59 @@ body {
   gap: 10px;
   align-items: center;
 }
+@media (min-width: 780px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .nav__links {
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
 }
+@media (min-width: 500px) {
+  .nav__links {
+    width: 65%;
+  }
+}
+@media (min-width: 780px) {
+  .nav__links {
+    max-width: 379px;
+  }
+}
+.nav__icon {
+  width: 25px;
+  height: 25px;
+}
+@media (min-width: 500px) {
+  .nav__icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (min-width: var(--tablet)) {
+  .nav__icon {
+    width: 35px;
+    height: 35px;
+  }
+}
+.nav__logo {
+  width: 200px;
+  height: 50px;
+}
+@media (min-width: 780px) {
+  .nav__logo {
+    width: 300px;
+    height: 75px;
+  }
+}
 
 .square {
-  min-width: 320px;
+  width: 320px;
+  height: 207px;
+  height: auto;
   background-color: var(--yellow);
   padding: 30px 0;
   display: flex;
@@ -82,6 +146,17 @@ body {
   margin-bottom: -50px;
   -webkit-clip-path: polygon(15% 1%, 100% 0, 100% 85%, 88% 100%, 0% 100%, 0% 15%);
           clip-path: polygon(15% 1%, 100% 0, 100% 85%, 88% 100%, 0% 100%, 0% 15%);
+  margin-left: auto;
+}
+@media (min-width: 780px) {
+  .square {
+    max-width: 624px;
+    height: auto;
+    padding: 70px;
+    width: 100%;
+    margin-right: 36px;
+    margin-bottom: 0;
+  }
 }
 .square__title {
   font-family: "Archangelsk";
@@ -90,6 +165,12 @@ body {
   text-align: center;
   color: var(--text-primary);
 }
+@media (min-width: 780px) {
+  .square__title {
+    font-size: 62px;
+    text-align: left;
+  }
+}
 .square__btn {
   padding: 10px 50px;
   background-color: var(--bg-item);
@@ -97,4 +178,10 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 200%;
+}
+@media (min-width: 780px) {
+  .square__btn {
+    font-size: 24px;
+    width: 290px;
+  }
 }/*# sourceMappingURL=style.css.map */
