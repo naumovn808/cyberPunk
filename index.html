@@ -99,15 +99,33 @@
             </section>
 
             <section class="form">
+
                 <div class="container">
 
                     <div class="wrapper">
 
+                        <div class="sale"></div>
+
                         <div class="form-images">
-                            <img src="./images/img1-mobile.png" alt="x-box"
-                                class="form-image1">
-                            <img src="./images/img2-mobile.png" alt="ps"
-                                class="form-image1">
+
+                            <picture>
+                                <source media="(min-width: 768px)"
+                                    srcset="./images/img1-tablet.png">
+                                <source media="(min-width: 400px)"
+                                    src="./images/img1-mobile.png">
+
+                                <img src="./images/img1-mobile.png" alt="x-box">
+                            </picture>
+
+                            <picture>
+                                <source media="(min-width: 768px)"
+                                    srcset="./images/img2-tablet.png">
+                                <source media="(min-width: 400px)"
+                                    srcset="./images/img2-mobile.png">
+
+                                <img src="./images/img2-mobile.png" alt="ps">
+                            </picture>
+
                         </div>
 
                         <div class="form-desc">
@@ -124,15 +142,23 @@
 
                             <form action="#" method="post">
                                 <label for="name"></label>
-                                <input id="name" class="input" type="text" name="name"required placeholder="Как тебя зовут?">
+                                <input id="name" class="input" type="text"
+                                    name="name" required
+                                    placeholder="Как тебя зовут?">
                                 <label for="email"></label>
-                                <input id="email" class="input" type="email" name="email" required placeholder="Твой е-mail">
-                                <label class="label-file" for="file">Прикрепить скриншот</label>
+                                <input id="email" class="input" type="email"
+                                    name="email" required
+                                    placeholder="Твой е-mail">
+                                <label class="label-file" for="file">Прикрепить
+                                    скриншот</label>
                                 <input type="file" id="file" class="file">
                                 <button class="form-btn">Отправить</button>
 
-                                <input class="checkbox" id="checkbox" checked type="checkbox">
-                                <label for="checkbox" class="label-checkbox">Согласен на обработку персональных данных</label>
+                                <input class="checkbox" id="checkbox" checked
+                                    type="checkbox">
+                                <label for="checkbox"
+                                    class="label-checkbox">Согласен на обработку
+                                    персональных данных</label>
 
                             </form>
                         </div>

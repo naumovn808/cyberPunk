@@ -29,6 +29,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 :root {
@@ -55,7 +56,7 @@ body {
 
   @media (min-width: 1020px) {
     padding: 0 100px;
-    width: 60%;
+    // width: 60%;
     max-width: 1920px;
   }
 }
@@ -294,7 +295,7 @@ body {
   &::after {
     content: "";
     position: absolute;
-    bottom: -80px;
+    bottom: -70px;
     display: block;
     width: 100%;
     height: 70px;
@@ -320,8 +321,13 @@ body {
   }
 }
 
-.form-image {
+.form-images {
   margin-top: 25px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 form {
@@ -427,4 +433,40 @@ label {
   position: absolute;
   left: -19px;
   top: 1px;
+}
+
+.wrapper {
+  margin-top: 25px;
+  position: relative;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.sale {
+  background-image: url(./images/sale.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 62px;
+  height: 62px;
+  position: absolute;
+  top: -50px;
+  left: 0;
+
+  @media (min-width: 768px) {
+    left: 10%;
+    top: 30px;
+    width: 132px;
+    height: 132px;
+  }
+}
+
+.form-desc {
+  @media (min-width: 768px) {
+    width: 460px;
+  }
 }
