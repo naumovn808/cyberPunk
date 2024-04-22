@@ -278,7 +278,7 @@ body {
 
 .form {
   background-color: var(--bg-item);
-  padding-top: 55px;
+  padding-top: 80px;
   position: relative;
 }
 .form::before {
@@ -312,11 +312,33 @@ body {
   font-family: "Archangelsk";
   margin-bottom: 25px;
 }
+@media (min-width: 780px) {
+  .form__title {
+    font-size: 62px;
+    margin-top: 50px;
+  }
+}
+@media (min-width: 1280px) {
+  .form__title {
+    width: 600px;
+    padding-left: 150px;
+  }
+}
 .form__description {
   font-weight: 400;
   font-size: 16px;
   line-height: 200%;
   color: #fff;
+}
+@media (min-width: 780px) {
+  .form__description {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1280px) {
+  .form__description {
+    width: 900px;
+  }
 }
 
 .form-images {
@@ -326,6 +348,22 @@ body {
   .form-images {
     display: flex;
     flex-direction: column;
+    margin-right: -50px;
+  }
+}
+@media (min-width: 1280px) {
+  .form-images {
+    flex-direction: row;
+    margin-top: 50px;
+    margin-right: 0;
+    margin-left: -100px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .pic1 {
+    margin-right: -100px;
+    z-index: 10;
   }
 }
 
@@ -466,8 +504,16 @@ label {
 }
 @media (min-width: 768px) {
   .sale {
-    left: 10%;
-    top: 30px;
+    left: 0%;
+    top: -75px;
+    width: 132px;
+    height: 132px;
+  }
+}
+@media (min-width: 1780px) {
+  .sale {
+    left: 9%;
+    top: -70px;
     width: 132px;
     height: 132px;
   }

@@ -276,7 +276,7 @@ body {
 
 .form {
   background-color: var(--bg-item);
-  padding-top: 55px;
+  padding-top: 80px;
   position: relative;
 
   &::before {
@@ -311,6 +311,16 @@ body {
     color: #fff;
     font-family: "Archangelsk";
     margin-bottom: 25px;
+
+    @media (min-width: 780px) {
+      font-size: 62px;
+      margin-top: 50px;
+    }
+
+    @media (min-width: 1280px) {
+      width: 600px;
+      padding-left: 150px;
+    }
   }
 
   &__description {
@@ -318,6 +328,14 @@ body {
     font-size: 16px;
     line-height: 200%;
     color: #fff;
+
+    @media (min-width: 780px) {
+      font-size: 18px;
+    }
+
+    @media (min-width: 1280px) {
+      width: 900px;
+    }
   }
 }
 
@@ -327,6 +345,21 @@ body {
   @media (min-width: 768px) {
     display: flex;
     flex-direction: column;
+    margin-right: -50px;
+  }
+
+  @media (min-width: 1280px) {
+    flex-direction: row;
+    margin-top: 50px;
+    margin-right: 0;
+    margin-left: -100px;
+  }
+}
+
+.pic1 {
+  @media (min-width: 1280px) {
+    margin-right: -100px;
+    z-index: 10;
   }
 }
 
@@ -458,8 +491,15 @@ label {
   left: 0;
 
   @media (min-width: 768px) {
-    left: 10%;
-    top: 30px;
+    left: 0%;
+    top: -75px;
+    width: 132px;
+    height: 132px;
+  }
+
+    @media (min-width: 1780px) {
+    left: 9%;
+    top: -70px;
     width: 132px;
     height: 132px;
   }
