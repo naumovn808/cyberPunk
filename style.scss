@@ -497,7 +497,7 @@ label {
     height: 132px;
   }
 
-    @media (min-width: 1780px) {
+  @media (min-width: 1780px) {
     left: 9%;
     top: -70px;
     width: 132px;
@@ -508,5 +508,170 @@ label {
 .form-desc {
   @media (min-width: 768px) {
     width: 460px;
+  }
+}
+
+.display {
+  background-color: var(--yellow);
+  padding-top: 100px;
+
+  &__title {
+    font-family: "Archangelsk";
+    font-weight: 400;
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 25px;
+
+    @media (min-width: 780px) {
+      font-size: 62px;
+    }
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+    color: #000;
+    margin-bottom: 25px;
+
+    @media (min-width: 780px) {
+      font-size: 18px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-left: 30px;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    position: relative;
+
+    @media (min-width: 780px) {
+      font-size: 18px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: -30px;
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__icons {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & img:nth-child(1) {
+      width: 44px;
+      height: 44px;
+
+      @media (min-width: 780px) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    & img:nth-child(2) {
+      width: 60px;
+      height: 15px;
+
+      @media (min-width: 780px) {
+        width: 90px;
+        height: 20px;
+      }
+    }
+    & img:nth-child(3) {
+      width: 176px;
+      height: 44px;
+
+      @media (min-width: 780px) {
+        width: 320px;
+        height: 80px;
+      }
+    }
+  }
+}
+
+.color::before {
+  background-image: url(./images/color.svg);
+  width: 18px;
+  height: 18px;
+}
+
+.star::before {
+  background-image: url(./images/stars.svg);
+  width: 22px;
+  height: 22px;
+}
+
+.fps::before {
+  background-image: url(./images/fps.svg);
+  width: 20px;
+  height: 20px;
+}
+
+.display__btn {
+  border: none;
+  padding: 15px 50px;
+  background-color: #000;
+  color: #f8f200;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 70px;
+  transition: opacity, 0.5s;
+  cursor: pointer;
+
+  @media (min-width: 780px) {
+    font-size: 18px;
+  }
+}
+
+.display__btn:hover {
+  opacity: 0.8;
+}
+
+.display-wrapper {
+  @media (min-width: 780px) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1280px;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+}
+
+.display__icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
   }
 }
