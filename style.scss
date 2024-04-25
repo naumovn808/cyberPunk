@@ -675,3 +675,113 @@ label {
     flex-direction: row;
   }
 }
+
+.buy {
+  &-bg {
+    min-height: 200px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./images/buy-mobile.jpg);
+    margin-bottom: 40px;
+
+    @media (min-width: 780px) {
+      background-image: url(./images/buy-tablet.jpg);
+      height: 717px;
+      width: 332px;
+      margin-bottom: 0;
+    }
+    @media (min-width: 1024px) {
+      background-image: url(./images/buy-desc.jpg);
+      max-width: 944px;
+      width: 100%;
+    }
+  }
+
+  &-wrapper {
+    background-color: #000;
+    padding-bottom: 70px;
+
+    @media (min-width: 780px) {
+      display: flex;
+      padding-bottom: 0;
+    }
+  }
+
+  &-about {
+    padding: 0 12px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 30px;
+    color: #fff;
+    font-family: "Archangelsk";
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-left: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -30px;
+      width: 20px;
+      height: 20px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.disc::before {
+  background-image: url(./images/disk.svg);
+}
+
+.vector::before {
+  background-image: url(./images/Vector.svg);
+}
+
+.images-icon::before {
+  background-image: url(./images/images.svg);
+}
+
+.buy__desc {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #52bedc;
+}
+
+.buy__icons {
+  padding: 0 12px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 56px;
+  row-gap: 48px;
+}
+
+.buy-wrapper2 {
+  @media (min-width: 780px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+}
